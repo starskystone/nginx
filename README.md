@@ -16,7 +16,7 @@ tar -zxvf nginx-1.9.0.tar.gz
 cd nginx-1.9.0  
 ./configure   --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module   
 
-###目录结构   
+### 目录结构   
 ./nginx -c nginx.conf的文件。如果不指定，默认为NGINX_HOME/conf/nginx.conf    
 ./nginx -s stop  停止   
 ./nginx -s quit退出   
