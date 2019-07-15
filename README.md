@@ -65,11 +65,11 @@ worker_connection是设置nginx每个进程最大的连接数，默认是1024，
 
 ### nginx对http服务器相关属性的设置
 http {
-    include       mime.types;               主模块命令，对配置文件所包含文件的设定，减少主配置文件的复杂度，相当于把部分设置放在别的地方，然后在包含进来，保持主配置文件的简洁
-    default_type  application/octet-stream; 默认文件类型，当文件类型未定义时候就使用这类设置的。
-     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '   指定nginx日志的格式
-    #                  '$status $body_bytes_sent "$http_referer" '
-    #                  '"$http_user_agent" "$http_x_forwarded_for"';
+    include       mime.types;               主模块命令，对配置文件所包含文件的设定，减少主配置文件的复杂度，相当于把部分设置放在别的地方，然后在包含进来，保持主配置文件的简洁   
+    default_type  application/octet-stream; 默认文件类型，当文件类型未定义时候就使用这类设置的。    
+     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '   指定nginx日志的格式   
+    #                  '$status $body_bytes_sent "$http_referer" '    
+    #                  '"$http_user_agent" "$http_x_forwarded_for"';    
 
     #access_log  logs/access.log  main;
     sendfile        on;   开启高效文件传输模式（zero copy 方式），避免内核缓冲区数据和用户缓冲区数据之间的拷贝。
