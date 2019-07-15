@@ -82,7 +82,7 @@ http {
 
 ### 下面是server段虚拟主机的配置
 server {    
-        listen       80;   虚拟主机的服务端口    
+listen       80;   虚拟主机的服务端口      
         server_name  localhost;   用来指定ip或者域名，多个域名用逗号分开    
         #charset koi8-r;    
         location / {          
