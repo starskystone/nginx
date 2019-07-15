@@ -79,3 +79,21 @@ http {
     keepalive_timeout  65;
 
     #gzip  on;             设置是否开启gzip模块
+
+### 下面是server段虚拟主机的配置
+server {    
+        listen       80;   虚拟主机的服务端口    
+        server_name  localhost;   用来指定ip或者域名，多个域名用逗号分开    
+        #charset koi8-r;    
+        location / {          
+               #地址匹配设置，支持正则匹配，也支持条件匹配，这里是默认请求地址，用户可以location命令对nginx进行动态和静态网页过滤处理   
+            root   html;                   虚拟主机的网页根目录   
+            index  index.html index.htm;   默认访问首页文件   
+        }   
+        #error_page  404              /404.html;    
+        # redirect server error pages to the static page /50x.html            
+        error_page   500 502 503 504  /50x.html;    
+        location = /50x.html {    
+            root   html;    
+        }         
+}   
